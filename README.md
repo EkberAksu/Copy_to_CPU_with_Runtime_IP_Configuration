@@ -5,7 +5,7 @@ P4 project
 This program shows how we can mirror the incoming packets to the CPU port for desired IP addresses. The program acts as simple switch if no packets should be mirrored to the CPU.
 
 The P4 program does the following:
-- incoming packets are mirrored to the CPU port in the ingress pipeline if the destination IP address is in the copy_to_cpu table. This table can be modified from the [commands](commands.txt). The current table contains 2 IP addresses: `10.0.0.1` and `10.0.0.2`;
+- incoming packets are mirrored to the CPU port in the ingress pipeline if the destination IP address is in the copy_to_cpu table. This table can be modified from the [commands](commands.txt). The current table contains 2 IP addresses: `10.0.1.0` and `10.0.3.0`;
 - next hop is obtained from the ipv4_lpm table in the ingress pipeline;
 - the packet's destination is obtained from the forward table in the ingress pipeline;
 - the original packet is sent to it's original destination in the egress pipeline;
